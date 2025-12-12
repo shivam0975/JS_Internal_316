@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form  id="formMain">
+        <label for="userName">Name : </label>
+        <input type="text" name="userName" placeHolder="Enter Name" id="inputName"> 
+
+        <label for="userPassword">Password : </label>
+        <input type="text" name="userPassword" placeHolder="Enter Password" id="inputPassword"> 
+
+        <button onclick="submit">Submit</button>
+
+        <p id="error"></p>
+
+    </form>
+
+
+        <script>
+
+            const mainForm = document.getElementById('formMain');
+            const password = document.getElementById('inputPassword');
+
+            let error = document.getElementById('error');
+
+            mainForm.addEventListener("submit" , (event) => {
+                const username = document.getElementById('inputName').value.trim();
+                event.preventDefault(); // Prevent Reloding
+
+                if(username === ""){
+                    error.style.color = "red";
+                    error.innerText="USER NAME CANNOT BE EMPTY";
+                }else{
+                    error.style.color = "green";
+                    error.innerText="USER NAME CORRECT";
+                }
+            });
+        </script>
+
+</body>
+</html>

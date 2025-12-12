@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with JS</title>
+</head>
+<body>
+    <h1 id="hId1">This is Main Heading</h1>
+    <h2 id="hId2">This is Sub_Heading</h2>
+    <!-- <button onclick="clickedB1()" >Change H1</button>
+    <button onclick="clickedB2()" >Change H2</button> -->
+    <!-- <button  id="b1">Change Caption</button>
+    <button id="b2">Change Color</button> -->
+
+    <button id="b1">Red</button>
+    <button id="b2">Green</button>
+    <button id="b3">Blue</button>
+
+
+    <script>
+        // function clickedB1(){
+        //     document.getElementById("hId1").innerText = "This is changed Heading";
+        // }
+        // function clickedB2(){
+        //     document.getElementById("hId2").innerText = "This is changed Sub_Heading";
+        // }
+
+        // const buttonFirst = document.getElementById("b1");
+        // const buttonSecond = document.getElementById("b2");
+
+        // buttonFirst.addEventListener("click" , () =>{
+        //     document.getElementById("hId1").innerText = "This is changed H1 by EventListner";
+        //     document.getElementById("hId2").innerText = "This is changed H2 by EventListner";
+        // });
+        // buttonSecond.addEventListener("click", () => {
+        //     document.getElementById("hId1").style.color = "red";
+        //     document.getElementById("hId2").style.color = "blue";
+        // }) ;
+
+        const buttonFirst = document.getElementById("b1");
+        const buttonSecond = document.getElementById("b2");
+        const buttonThird = document.getElementById("b3");
+        const head1 = document.getElementById("hId1");
+        const head2 = document.getElementById("hId2");
+        const area = document.querySelector('body');
+
+        buttonFirst.addEventListener("click" , () =>{
+            area.style.backgroundColor = 'red';
+            head1.style.color = "white";
+            head2.style.color = "white";
+        });
+        buttonSecond.addEventListener("click", () => {
+            area.style.backgroundColor = 'green';
+            head1.style.color = "white";
+            head2.style.color = "white";
+        });
+        buttonThird.addEventListener("click", () => {
+            area.style.backgroundColor = 'blue';
+            head1.style.color = "white";
+            head2.style.color = "white";
+        });
+
+    </script>
+</body>
+</html>
+
+userID
+password enter ur name 
