@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+
+    <!-- Task 3: Image Switcher
+    Create an <img> tag and two buttons Next & Previous.
+    Clicking buttons should switch between two images. -->
+
+    <button id="next">Next</button>
+    <button id="previous">Previous</button> <br><br>
+    <img src="https://cdn.pixabay.com/photo/2020/07/05/02/46/nature-5371398_1280.jpg" alt="" id="image">
+    
+
+    <script>
+
+        const image = document.getElementById('image');
+        const nextButton = document.getElementById('next');
+        const previousButton = document.getElementById('previous');
+
+        const imagesUrl = ["https://cdn.pixabay.com/photo/2020/07/05/02/46/nature-5371398_1280.jpg" , "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png"];
+        let imageIndex = 0;
+
+        nextButton.addEventListener('click' , () => {
+            imageIndex = (imageIndex+1)%2;
+            image.src = imagesUrl[imageIndex];
+        });
+
+        previousButton.addEventListener('click' , () => {
+            imageIndex = (imageIndex-1 + 2)%2;
+            image.src = imagesUrl[imageIndex];
+        });
+
+        
+    </script>
+</body>
+</html>

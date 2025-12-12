@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body>
+    
+    <!-- Task 7: Form Input Reader
+    Create a form with input name and a button.
+    When clicked → print user name in output area. -->
+
+    <form onsubmit="handleSubmit(event)" id="userForm">
+        <label for="userName"></label>
+        <input type="text" name="userName" id="userInput" placeholder="Enter Name">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            const userName = document.getElementById('userInput').value;
+            document.body.innerHTML = `<h1>Hello ${userName}</h1>`;
+        };
+
+
+    </script>
+</body>
+</html>

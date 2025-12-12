@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+<body>
+    <!-- Task 8: Todo List
+    Input field + Add Task button.
+    Add tasks in <ul> list on click. -->
+
+    <label for="task"></label>
+    <input type="text" name="task" placeholder="Provide Tasks" id="taskInput">
+    <button id="addButton">Add Task</button>
+
+    <ul id="listItem"></ul>
+
+    <script>
+        const inputTask = document.getElementById('taskInput');
+        const addButton = document.getElementById('addButton');
+        const listItem = document.getElementById('listItem');
+
+        addButton.addEventListener('click' , () => {
+            const task = inputTask.value;
+            const list = document.createElement('li');
+            list.innerText = task;
+            listItem.appendChild(list);
+        });
+
+    </script>
+</body>
+</html>

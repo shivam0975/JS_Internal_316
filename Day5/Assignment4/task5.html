@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <!-- Task 5: Counter App
+    Create two buttons + Increase & - Decrease.
+    Display count in <span>.
+    Count cannot go below 0. -->
+
+    <span id="content"></span>
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+
+    <script>
+        const content = document.getElementById('content');
+        const increaseButton = document.getElementById('increment');
+        const decreaseButton = document.getElementById('decrement');
+        content.innerText = 0;
+
+        increaseButton.addEventListener('click' , () => {
+            let count = content.innerText;
+            count++;
+            content.innerText = count;
+        })
+
+        decreaseButton.addEventListener('click' , () => {
+            let count = content.innerText;
+            if(count!=0){
+                count--;
+                content.innerText = count;
+            }
+        })
+
+    </script>
+</body>
+</html>

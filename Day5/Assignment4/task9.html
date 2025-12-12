@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<body>
+    <!-- Task 9: Attribute Change
+    Add an image and two buttons:
+    Small & Large → change image size using setAttribute(). -->
+
+    <img id="image" src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-beach-free-image-after-sunset-sky-free-photo.jpeg?w=600&quality=80" alt="">
+    <button id="small">Small</button>
+    <button id="large">Large</button>
+
+    <script>
+        const image = document.getElementById('image');
+        const smallButton = document.getElementById('small');
+        const largeButton = document.getElementById('large');
+
+        smallButton.addEventListener("click" , () => {
+            image.style.width="300px";
+        })
+
+        largeButton.addEventListener("click" , () => {
+            image.style.width="1200px";
+        })
+    </script>
+</body>
+</html>

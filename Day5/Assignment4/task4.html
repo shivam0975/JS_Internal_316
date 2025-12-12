@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <!-- Task 4: Show/Hide Paragraph
+    Create a paragraph and a button.
+    Click button → hide paragraph
+    Click again → show paragraph
+    (hint: style.display = "none" / "block") -->
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis, sapiente at corrupti commodi tenetur labore ex? Magni ex iure, illo ad quae eligendi voluptas dolores nihil. Necessitatibus, aperiam nisi.</p>
+    <button id="togglePara">Hide Para</button>
+
+    <script>
+        const para = document.getElementById('para');
+        const toggleButton = document.getElementById('togglePara');
+        let flag = false; 
+
+        toggleButton.addEventListener('click' , () => {
+            if(flag){
+                para.style.display = "block";
+                toggleButton.innerText = "Hide Para";
+            }else{
+                para.style.display = "none"
+                toggleButton.innerText = "Show Para";
+            }
+            flag = !flag;
+        })
+
+    </script>
+</body>
+</html>

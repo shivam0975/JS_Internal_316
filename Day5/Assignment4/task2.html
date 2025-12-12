@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body style="position: absolute; top:40% ; left:40% ;">
+    
+    <!-- Task 2: Background Color Changer
+    Create 3 buttons: Red, Blue, Green.
+    On clicking each button, change background color of page. -->
+
+    <button id="redButton">Red</button>
+    <button id="greenButton">Green</button>
+    <button id="blueButton">Blue</button>
+
+    <script>
+
+        const redButton = document.getElementById('redButton');
+        const greenButton = document.getElementById('greenButton');
+        const blueButton = document.getElementById('blueButton');
+
+        redButton.addEventListener( 'click' , () => document.body.style.backgroundColor = 'red');
+        greenButton.addEventListener( 'click' , () => document.body.style.backgroundColor = 'green');
+        blueButton.addEventListener( 'click' , () => document.body.style.backgroundColor = 'blue');
+
+    </script>
+
+</body>
+</html>

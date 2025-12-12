@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+    
+    <!-- Task 6: Create Element Dynamically
+    Create a button "Add Box".
+    On click → create a <div> and append to body.
+    Bonus: add border + padding + background style. -->
+
+    <button id="addBox">Add Box</button>
+
+    <script>
+
+        const addBoxButton = document.getElementById('addBox');
+
+        addBoxButton.addEventListener( 'click' , () => {
+
+            const container = document.createElement('div');;
+            container.style.border = "1px solid black";
+            container.style.padding = "50px";
+            container.style.backgroundColor = "lightgreen" ;
+            container.style.marginBottom = "20px";
+
+            document.body.appendChild(container);
+        } );
+    </script>
+
+</body>
+</html>
