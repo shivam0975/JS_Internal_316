@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Layout Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* ===== Heading Bar ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header .logo {
+            flex: 1;
+        }
+
+        .header .logo img {
+            height: 40px;
+        }
+
+        .header .title {
+            flex: 2;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .header .extra {
+            flex: 1;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        /* ===== Navigation Bar ===== */
+        .navbar {
+            background-color: #0059b3;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Main Section ===== */
+        .main {
+            display: flex;
+            padding: 20px;
+            min-height: calc(100vh - 120px);
+        }
+
+        .side-panel,
+        .right-panel {
+            width: 20%;
+            background-color: #e6e6e6;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .mid-panel {
+            width: 60%;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ===== Login Box ===== */
+        .login-box {
+            background-color: #ffffff;
+            padding: 25px;
+            width: 320px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-box label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0059b3;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-box button:hover {
+            background-color: #003d80;
+        }
+
+        .login-box .new-user {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .login-box .new-user a {
+            text-decoration: none;
+            color: #0059b3;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 900px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .side-panel,
+            .mid-panel,
+            .right-panel {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<div class="header">
+    <div class="logo">
+        <img src="https://www.hcltech.com/themes/custom/hcltech/images/hcltech-new-logo.svg" alt="Logo">
+    </div>
+    <div class="title">
+        HCL Assessment Page
+    </div>
+    <div class="extra">
+        Help | Contact
+    </div>
+</div>
+
+<!-- ===== Navigation Bar ===== -->
+<div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Support</a>
+</div>
+
+<!-- ===== Main Section ===== -->
+<div class="main">
+
+    <!-- Left Panel -->
+    <div class="side-panel">
+        <h3>Side Panel</h3>
+        <p>Announcements, links, or content here.</p>
+    </div>
+
+    <!-- Middle Panel (Login) -->
+    <div class="mid-panel">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="./next.html" method="get">
+                <label>User ID</label>
+                <input type="text" name="userId" placeholder="Enter User Id" required>
+
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter Password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="new-user">
+                New user? <a href="register.html">Register here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+        <h3>Info Panel</h3>
+        <p>News, notices, or ads can go here.</p>
+    </div>
+
+</div>
+
+
+<script>
+    
+</script>
+
+</body>
+</html>
+
+
+<!-- Transfer values usign different controls -->
+ <!-- Post + validation  -->
+
+
