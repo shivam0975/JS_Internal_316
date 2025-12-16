@@ -34,9 +34,11 @@
                 if(username === ""){
                     error.style.color = "red";
                     error.innerText="USER NAME CANNOT BE EMPTY";
+                    return;
                 }else{
                     error.style.color = "green";
                     error.innerText="USER NAME CORRECT";
+                    this.submit();
                 }
             });
         </script>

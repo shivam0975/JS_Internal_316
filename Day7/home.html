@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <center><h1>This is heading</h1></center>
+    <hr>
+    <b>Home &nbsp; &nbsp; &nbsp; &nbsp; Gallery &nbsp; &nbsp; &nbsp; &nbsp; Menu 
+    &nbsp; &nbsp; &nbsp; &nbsp; Service</b>
+    <hr>
+    <div style="position: absolute; left: 0%; width: 33%; height: 85%; background-color: beige;">
+        <center>
+            Heading 1 <br>
+            Heading 2 <br>
+            Heading 3 <br>
+        </center>
+    </div>
+    <div style="position: absolute; left: 33%; width: 33%; height: 85%; background-color:bisque;">
+        <center>Important Notice</center>
+        <marquee behavior="" direction="up" onmouseover="stop()" onmouseout="start()"">
+            <center>Notice 1 <br>
+            Notice 2 <br>
+            Notice 3 <br>
+            Notice 4 <br>
+            Notice 5 <br>
+            Notice 6 <br></center>
+        </marquee>
+    </div>
+    <div style="position: absolute; left: 66%; width: 33%; height: 85%; background-color:burlywood;">
+        <center>Login</center><br>
+        <center>
+        <form action="./login.html" id="formMain">
+        <table>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" id="inputName" placeholder="Enter your Name"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="userPassword" placeholder="Enter your Name"><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        
+        
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+        </form>
+    
+        <br>
+        <a href="./registration.html">New User or SignUp</a>
+
+        <p id="error"></p>
+        </center>
+    </div>
+
+    <script>
+        const mainForm = document.getElementById('formMain');
+            const password = document.getElementById('inputPassword');
+
+            let error = document.getElementById('error');
+
+            mainForm.addEventListener("submit" , (event) => {
+                const username = document.getElementById('inputName').value.trim();
+                event.preventDefault(); // Prevent Reloding
+
+                if(username === ""){
+                    error.style.color = "red";
+                    error.innerText="USER NAME CANNOT BE EMPTY";
+                    return;
+                }else{
+                    error.style.color = "green";
+                    error.innerText="USER NAME CORRECT";
+                    mainForm.submit();
+                }
+            });
+    </script>
+</body>
+</html>
