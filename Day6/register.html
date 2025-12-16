@@ -10,7 +10,6 @@
             background-color: #f2f2f2;
         }
 
-        /* ===== Header ===== */
         .header {
             display: flex;
             align-items: center;
@@ -41,7 +40,6 @@
             font-size: 14px;
         }
 
-        /* ===== Navbar ===== */
         .navbar {
             background-color: #0059b3;
             padding: 10px;
@@ -58,7 +56,6 @@
             text-decoration: underline;
         }
 
-        /* ===== Main Section ===== */
         .main {
             display: flex;
             padding: 20px;
@@ -80,7 +77,6 @@
             align-items: center;
         }
 
-        /* ===== Registration Box ===== */
         .register-box {
             background-color: #ffffff;
             padding: 25px;
@@ -133,24 +129,11 @@
             color: #0059b3;
         }
 
-        /* ===== Responsive ===== */
-        @media (max-width: 900px) {
-            .main {
-                flex-direction: column;
-            }
-
-            .side-panel,
-            .mid-panel,
-            .right-panel {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-        }
     </style>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
+
 <div class="header">
     <div class="logo">
         <img src="logo.png" alt="Logo">
@@ -163,7 +146,7 @@
     </div>
 </div>
 
-<!-- ===== Navbar ===== -->
+
 <div class="navbar">
     <a href="home.html">Home</a>
     <a href="#">About</a>
@@ -171,16 +154,14 @@
     <a href="#">Support</a>
 </div>
 
-<!-- ===== Main Section ===== -->
+
 <div class="main">
 
-    <!-- Left Panel -->
     <div class="side-panel">
         <h3>Guidelines</h3>
         <p>Please fill all fields correctly.</p>
     </div>
 
-    <!-- Middle Panel (Registration Form) -->
     <div class="mid-panel">
         <div class="register-box">
             <h2>Create Account</h2>
@@ -209,7 +190,6 @@
         </div>
     </div>
 
-    <!-- Right Panel -->
     <div class="right-panel">
         <h3>Information</h3>
         <p>Password must be at least 8 characters.</p>

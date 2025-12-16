@@ -10,7 +10,6 @@
             background-color: #f2f2f2;
         }
 
-        /* ===== Heading Bar ===== */
         .header {
             display: flex;
             align-items: center;
@@ -41,7 +40,6 @@
             font-size: 14px;
         }
 
-        /* ===== Navigation Bar ===== */
         .navbar {
             background-color: #0059b3;
             padding: 10px;
@@ -58,7 +56,6 @@
             text-decoration: underline;
         }
 
-        /* ===== Main Section ===== */
         .main {
             display: flex;
             padding: 20px;
@@ -81,7 +78,6 @@
             align-items: center;
         }
 
-        /* ===== Login Box ===== */
         .login-box {
             background-color: #ffffff;
             padding: 25px;
@@ -134,24 +130,10 @@
             color: #0059b3;
         }
 
-        /* ===== Responsive ===== */
-        @media (max-width: 900px) {
-            .main {
-                flex-direction: column;
-            }
-
-            .side-panel,
-            .mid-panel,
-            .right-panel {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-        }
     </style>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
 <div class="header">
     <div class="logo">
         <img src="https://www.hcltech.com/themes/custom/hcltech/images/hcltech-new-logo.svg" alt="Logo">
@@ -164,7 +146,7 @@
     </div>
 </div>
 
-<!-- ===== Navigation Bar ===== -->
+
 <div class="navbar">
     <a href="#">Home</a>
     <a href="#">About</a>
@@ -172,25 +154,25 @@
     <a href="#">Support</a>
 </div>
 
-<!-- ===== Main Section ===== -->
+
 <div class="main">
 
-    <!-- Left Panel -->
+
     <div class="side-panel">
         <h3>Side Panel</h3>
         <p>Announcements, links, or content here.</p>
     </div>
 
-    <!-- Middle Panel (Login) -->
+
     <div class="mid-panel">
         <div class="login-box">
             <h2>Login</h2>
-            <form action="./next.html" method="get">
+            <form action="./next.html" method="get" onsubmit="return validateForm()">
                 <label>User ID</label>
-                <input type="text" name="userId" placeholder="Enter User Id" required>
+                <input type="text" name="userId" placeholder="Enter User Id" >
 
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="password" name="password" placeholder="Enter Password">
 
                 <button type="submit">Login</button>
             </form>
@@ -198,10 +180,11 @@
             <div class="new-user">
                 New user? <a href="register.html">Register here</a>
             </div>
+
+            <div id="errorMsg" style="color:red; text-align:center; margin-top:10px;"></div>
         </div>
     </div>
 
-    <!-- Right Panel -->
     <div class="right-panel">
         <h3>Info Panel</h3>
         <p>News, notices, or ads can go here.</p>
@@ -211,7 +194,27 @@
 
 
 <script>
-    
+    function validateForm() {
+    const userId = document.querySelector('input[name="userId"]').value.trim();
+    const password = document.querySelector('input[name="password"]').value.trim();
+    const errorMsg = document.getElementById("errorMsg");
+
+    errorMsg.innerHTML = "";
+
+
+    if (userId.length === 0) {
+        errorMsg.innerHTML = "User ID cannot be empty.";
+        return false;
+    }
+
+
+    if (password.length === 0) {
+        errorMsg.innerHTML = "Password cannot be empty.";
+        return false;
+    }
+
+    return true;
+}
 </script>
 
 </body>
