@@ -1,0 +1,88 @@
+body {
+    background: #eef2f7;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #ffffff;
+    padding: 28px 26px;
+    width: 420px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2f3a45;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 95%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gender {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.gender input {
+    margin-right: 4px;
+}
+
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background:  #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.error {
+    text-align: center;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.success {
+    text-align: center;
+    color: #16a34a;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.output {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #374151;
+}

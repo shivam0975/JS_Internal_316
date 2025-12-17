@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body style="margin:0; font-family: Arial, Helvetica, sans-serif; background-color:#f4f4f4;">
+
+
+    <center>
+        <h1 style="margin:20px 0; color:#444; letter-spacing:1px;">
+            Student Login Page
+        </h1>
+    </center>
+
+    <hr style="border:1px solid #ccc;">
+
+
+    <center>
+        <b style="font-size:16px; color:#555;">
+            Home &nbsp;&nbsp;&nbsp;&nbsp;
+            Gallery &nbsp;&nbsp;&nbsp;&nbsp;
+            Menu &nbsp;&nbsp;&nbsp;&nbsp;
+            Service
+        </b>
+    </center>
+
+    <hr style="border:1px solid #ccc;">
+
+    <div style="position:absolute; left:0%; width:33%; height:85%;
+            background-color:#F5F7FA;
+            padding:24px; box-sizing:border-box;
+            border-right:1px solid #DADDE1;">
+        <center>
+            <h3 style="color:#333; margin-bottom:15px;">Quick Links</h3>
+            <p style="line-height:2; color:#555;">
+                Heading 1 <br>
+                Heading 2 <br>
+                Heading 3
+            </p>
+        </center>
+    </div>
+
+    <div style="position:absolute; left:33%; width:33%; height:85%;
+            background-color:#FFFFFF;
+            padding:24px; box-sizing:border-box;
+            border-right:1px solid #DADDE1;">
+
+        <center>
+            <h3 style="color:#333; margin-bottom:10px;">Important Notice</h3>
+        </center>
+
+        <marquee direction="up" scrollamount="2" onmouseover="stop()" onmouseout="start()"
+            style="height:50%; color:#444;">
+            <center style="line-height:2;">
+                Notice 1 <br>
+                Notice 2 <br>
+                Notice 3 <br>
+                Notice 4 <br>
+                Notice 5 <br>
+                Notice 6
+            </center>
+        </marquee>
+    </div>
+
+
+
+    <div style="position:absolute; left:66%; width:33%; height:85%;
+            background-color:#EEF2F6;
+            padding:24px; box-sizing:border-box;">
+
+        <center>
+            <h3 style="color:#333; margin-bottom:15px;">Login</h3>
+
+            <form action="./login.html" id="formMain">
+                <table style="margin-bottom:15px;">
+                    <tr>
+                        <td style="padding:5px; color:#444;">User Name</td>
+                        <td style="padding:5px;">
+                            <input type="text" id="inputName" placeholder="Enter your Name"
+                                style="padding:6px; border:1px solid #aaa; border-radius:4px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:5px; color:#444;">Password</td>
+                        <td style="padding:5px;">
+                            <input type="password" id="inputPassword" placeholder="Enter your Password"
+                                style="padding:6px; border:1px solid #aaa; border-radius:4px;">
+                        </td>
+                    </tr>
+                </table>
+
+                <button type="submit" style="padding:8px 15px; border:none; 
+                               background-color:#5a7d7c; color:white; 
+                               border-radius:4px; cursor:pointer;">
+                    Submit
+                </button>
+
+                <button type="reset" style="padding:8px 15px; border:none; 
+                               background-color:#999; color:white; 
+                               border-radius:4px; cursor:pointer;">
+                    Cancel
+                </button>
+            </form>
+
+            <br><br>
+
+            <a href="./registration.html" style="color:#333; text-decoration:none; font-weight:bold;" onmouseover="style.color='blue';"
+   onmouseout="style.color='#333';">
+                New User or SignUp
+            </a>
+
+            <p id="error" style="color:red; margin-top:10px;"></p>
+        </center>
+    </div>
+
+
+    <script>
+        const mainForm = document.getElementById('formMain');
+
+        let error = document.getElementById('error');
+
+        mainForm.addEventListener("submit", (event) => {
+            const username = document.getElementById('inputName').value.trim();
+            const password = document.getElementById('inputPassword').value.trim();
+            event.preventDefault(); // Prevents Reloding
+
+            if (username === "") {
+                error.style.color = "red";
+                error.innerText = "USER NAME CANNOT BE EMPTY";
+                return;
+            }else if(password === ""){
+                error.style.color = "red";
+                error.innerText = "USER PASSWORD CANNOT BE EMPTY";
+                return;
+            } else {
+                error.style.color = "green";
+                error.innerText = "USER NAME CORRECT";
+                mainForm.submit();
+            }
+        });
+    </script>
+</body>
+
+</html>

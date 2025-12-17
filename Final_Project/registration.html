@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="./registration.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Student Registration</h2>
+
+        <form id="registrationForm">
+
+            <label>Name</label>
+            <input type="text" id="name" >
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+            <label>Gender</label>
+            <div class="gender">
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <label>Course</label>
+            <select id="course">
+                <option value="">-- Select Course --</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="terms"> I agree to Terms & Conditions
+            </label>
+
+            <button type="submit">Submit</button>
+
+            <p class="error" id="errorMsg"></p>
+
+        </form>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const course = document.getElementById("course").value;
+            const terms = document.getElementById("terms").checked;
+            const genderElements = document.getElementsByName("gender");
+
+            let gender = "";
+            for (let ele of genderElements) {
+                if (ele.checked) {
+                    gender = ele.value;
+                    break;
+                }
+            }
+
+            const errorMsg = document.getElementById("errorMsg");
+            const output = document.getElementById("output");
+
+            errorMsg.textContent = "";
+            output.innerHTML = "";
+
+            if (name === "") {
+                errorMsg.textContent = "Name is required.";
+                return;
+            }
+
+            if (email === "" || !email.includes("@")) {
+                errorMsg.textContent = "Enter a valid email.";
+                return;
+            }
+
+            if (gender === "") {
+                errorMsg.textContent = "Please select gender.";
+                return;
+            }
+
+            if (course === "") {
+                errorMsg.textContent = "Please select a course.";
+                return;
+            }
+
+            if (!terms) {
+                errorMsg.textContent = "You must accept the terms & conditions.";
+                return;
+            }
+
+            output.innerHTML = `
+            <p class="success">Registration Successful!</p>
+            <p>Name: ${name}</p>
+            <p>Email: ${email}</p>
+            <p>Gender: ${gender}</p>
+            <p>Course: ${course}</p>
+        `;
+        });
+    </script>
+
+</body>
+
+</html>
